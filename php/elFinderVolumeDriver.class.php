@@ -4223,7 +4223,8 @@ abstract class elFinderVolumeDriver {
 	 * @author Dmitry (dio) Levashov
 	 **/
 	protected function tmbname($stat) {
-		return $stat['hash'].$stat['ts'].'.png';
+		// return $stat['hash'].$stat['ts'].'.png';
+		return pathinfo($stat['name'])['filename'] . '.png';
 	}
 	
 	/**
